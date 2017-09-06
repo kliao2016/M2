@@ -1,4 +1,5 @@
 package edu.gatech.oad.antlab.person;
+import java.util.Random;
 
 /**
  *  A simple class for person 2
@@ -31,11 +32,23 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  	//Person 2 put your implementation here
-	  	String result = "";
-	  	for (int i = input.length() - 1; i >= 0; i--) {
-	  		result += input.charAt(i);
-	  	}
-	  	return result;
+	  	// String result = "";
+	  	// for (int i = input.length() - 1; i >= 0; i--) {
+	  	// 	result += input.charAt(i);
+	  	// }
+	  	// return result;
+	  	Random random = new Random();
+    	char scramble[] = input.toCharArray();
+
+	    for (int i = 0 ; i < scramble.length; i++) {
+	        int j = random.nextInt(scramble.length);
+	        // Swap letters
+	        char temp = scramble[i];
+	        scramble[i] = scramble[j];
+	        scramble[j] = temp;
+	    }
+
+	    return new String(scramble);
 	}
 
 	/**
