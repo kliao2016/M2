@@ -12,7 +12,8 @@ jar {
 	// Manifest defines main class and classes necessary for compiling
 	// Stored in key value pairs
 	manifest {
-		attributes 'Main-Class' : 'edu.gatech.oad.antlab.pkg1.AntLabMain', 'Class-Path' : '../../lib/resources.jar'
+		attributes 'Main-Class' : 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+				   'Class-Path' : '../../lib/resources.jar'
 	}
 }
 
