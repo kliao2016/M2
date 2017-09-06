@@ -41,11 +41,11 @@ public class Person3 {
 	 * @param input the string to be reversed
 	 * @return the reversed string
 	 */
-	private String calc(String input) {
+    private String calc(String input) {
         String newStr = "";
-        for (int i = input.lenth(); i > 0; i--) {
-            newStr+= input[--i];
+        for (int i = (input.length() - 1); i > -1; i--) {
+            newStr+= input.charAt(i);
         }
-	   return newStr;
-	}
+       return newStr;
+    }
 }
