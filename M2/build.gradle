@@ -2,12 +2,14 @@ defaultTasks 'jar'
 
 apply plugin: 'java'
 
+// Variables we can define
 version = '1.0'
 
 dependencies {
 	compile files('lib/resources.jar')
 }
 
+// Custom jar task
 jar {
 	// Manifest defines main class and classes necessary for compiling
 	// Stored in key value pairs
